@@ -122,6 +122,7 @@ string2 = "This is a normal string12"
 print(f"'{var_space}' contains special characters: {contains_special_characters(var_space)}")
 print(f"'{string2}' contains special characters: {contains_special_characters(string2)}")
 
+#Conditional Statements:
 # IF , ELif, Else , Nested if use cases:
 #1.Dog or cat person
 catsOrDogs = input("Are you a cat person? Or a dog person?: ")
@@ -223,3 +224,4 @@ while(1==1): #Will always be True , hence goes for infinite loop
         break #breaks infinite loop once the condition is reached
 
     
+
