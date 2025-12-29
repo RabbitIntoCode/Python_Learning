@@ -1,0 +1,30 @@
+#1. To print if special characters present in our string ignoring spaces
+import re
+
+def contains_special_characters(input_string):
+    # Define a regular expression pattern to match special characters.
+    # [^a-zA-Z0-9\s] matches any character that is NOT a letter (a-z, A-Z),
+    # a digit (0-9), or a whitespace character (\s).
+    special_char_pattern = re.compile(r'[^a-zA-Z0-9\s]')
+    
+    # Use the search() method to find the first occurrence of the pattern in the string.
+    # If a match is found, search() returns a match object; otherwise, it returns None.
+    if special_char_pattern.search(input_string):
+        return True
+    else:
+        return False
+
+# 2. Check if a year is a leap year or not
+'''Rules:
+A year is leap if: divisible by 4, and (not divisible by 100 unless divisible by 400)'''
+year = int(input("Enter the year"))
+if(year%4 == 0):
+    if(year%100 == 0):
+        if(year%400 == 0):
+            print("Leap Year")
+        else:
+            print("Not Leap year")
+    else:
+        print("Leap year")
+else:
+    print("Not Leap year")
